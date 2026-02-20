@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# SkillSwap
+[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Dhruv-200/Skillswap)
 
-## Project info
+SkillSwap is a peer-to-peer skill exchange platform built on a time-based economy. Instead of money, users trade their time and skills for credits. Teach an hour of Python to earn a credit, and then use that credit to learn an hour of UI/UX design from another expert. It's a community-driven ecosystem where everyone's time holds equal value.
 
-**URL**: https://lovable.dev/projects/55ee80af-ccf9-40f7-8420-42d142f1cdfc
+## ✨ Core Features
 
-## How can I edit this code?
+*   **Skill Marketplace**: Post skills you can teach and browse a rich marketplace of skills offered by others.
+*   **Credit-Based Economy**: Earn credits by teaching and spend them to learn. One hour of any skill is equivalent to one credit.
+*   **Advanced Booking System**: Schedule sessions with providers, manage your calendar, and get automatic meeting links.
+*   **Real-time Messaging**: An in-app chat system allows users to communicate and coordinate sessions.
+*   **Programming Quiz Challenge**: Test your knowledge in over 10 programming languages, earn badges, and climb the leaderboard.
+*   **AI-Powered Learning Assistant**: Get personalized skill recommendations, discover auto-generated learning paths, and explore a skill compatibility matrix.
+*   **Comprehensive User Dashboard**: Manage your skills, track upcoming sessions, view transaction history, and see incoming requests from learners.
+*   **Feedback & Rating System**: A multi-step feedback process allows users to rate sessions and provide detailed reviews to build a trusted community.
+*   **Community Hub**: Explore community stats, see top-performing providers, and view a live feed of recent activity on the platform.
+*   **Google Calendar Integration**: Automatically create calendar events for confirmed sessions, complete with meeting links and reminders.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+*   **Frontend**: React, Vite, TypeScript
+*   **UI Framework**: Tailwind CSS, shadcn/ui
+*   **State Management**: React Query
+*   **Routing**: React Router
+*   **Backend & Database**: Firebase (Authentication, Firestore, Cloud Functions, Storage)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/55ee80af-ccf9-40f7-8420-42d142f1cdfc) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+To get a local copy up and running, follow these simple steps.
 
-**Use your preferred IDE**
+### Prerequisites
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+*   Node.js (v18 or later)
+*   npm or yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Installation & Setup
 
-Follow these steps:
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/dhruv-200/Skillswap.git
+    cd Skillswap
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **Set up Firebase:**
+    *   Create a project on the [Firebase Console](https://console.firebase.google.com/).
+    *   In your project dashboard, go to **Project Settings** > **General** and find your web app's configuration object.
+    *   Create a `.env.local` file in the root of the project.
+    *   Copy the following environment variables into your `.env.local` file and replace the placeholder values with your Firebase config keys:
+        ```env
+        VITE_FIREBASE_API_KEY=your-api-key-here
+        VITE_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
+        VITE_FIREBASE_PROJECT_ID=your-project-id
+        VITE_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
+        VITE_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
+        VITE_FIREBASE_APP_ID=your-app-id
+        ```
+    *   In the Firebase Console, navigate to **Authentication** > **Sign-in method** and enable the **Email/Password** and **Google** providers.
+    *   Under **Authentication** > **Settings** > **Authorized domains**, add `localhost`.
+    *   The required Firestore database rules and indexes are located in `firestore.rules` and `firestore.indexes.json`. You will need to deploy these to your project using the Firebase CLI.
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/55ee80af-ccf9-40f7-8420-42d142f1cdfc) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    The application will be available at `http://localhost:8080`.
