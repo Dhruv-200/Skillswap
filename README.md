@@ -1,5 +1,4 @@
 # SkillSwap
-[![Ask DeepWiki](https://devin.ai/assets/askdeepwiki.png)](https://deepwiki.com/Dhruv-200/Skillswap)
 
 SkillSwap is a peer-to-peer skill exchange platform built on a time-based economy. Instead of money, users trade their time and skills for credits. Teach an hour of Python to earn a credit, and then use that credit to learn an hour of UI/UX design from another expert. It's a community-driven ecosystem where everyone's time holds equal value.
 
